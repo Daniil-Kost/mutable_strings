@@ -1,13 +1,28 @@
-**lemkpg - CRUD API for quick and simple connection with PostgreSQL DB**
+**Python mutable strings**
+
+Python mutable strings define bytearray based class - MutStr with object of mutable strings and all
+ methods from default string
 
 **Installation**
 
-To install this package run command: `$ pip install lemkpg`
+To install this package run command: `$ pip install mutable_strings`
 
 **Usage**
 
-- import LemkPgApi class from lemkpg module: `>>> from lemkpg import LemkPgApi`
-- define with credentials of selected Postgres DB: 
-` >>> obj = LemkPgApi(db_name="demo_db", db_password="pass", db_user="postgres", db_host="127.0.0.1")`
+- import LemkPgApi class from lemkpg module: `>>> from mutable_strings import MutStr`
+- define object of mutable string: 
+`>>> mut_str = MutStr("Hello World")`
 
-After object creation - you can call methods from LemkPgApi and executing queries with it 
+_Output: Hello World_
+
+- for change string use slices (!Important - always use slices with two digits 
+when you change some symbols (e.g. [0:1]!)
+ `>>> mut_str[0:1] = "W"`
+ 
+_Output: Wello World_
+
+You can use new custom method - rreplace(old, new)
+`>>> mut_str.rreplace('W', 'H')`
+_Output: Wello Horld_
+
+Also you can use all default string methods.
