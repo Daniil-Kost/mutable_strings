@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='mutable_strings',
-      version='1.1',
+      version='1.3',
       description='mutable_strings package give MutStr class with mutable string object and strings methods for it.',
       url='https://github.com/Daniil-Kost/mutable_strings',
       author='Daniil Kostyshak',

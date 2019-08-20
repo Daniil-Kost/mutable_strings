@@ -19,12 +19,15 @@ To install this package run command: `$ pip install mutable_strings`
 
 ##### _Output: Hello World_
 
-- for change string use slices (!Important - always use slices with two digits 
-when you change some symbols (e.g. [0:1]!)
+- for change string use index or slices:
+
+ `>>> mut_str[0] = "R"`
  
- `>>> mut_str[0:1] = "W"`
+##### _Output: Rello World_
  
-##### _Output: Wello World_
+ `>>> mut_str[:] = "Wello Horld"`
+ 
+##### _Output: Wello Horld_
 
 You can use new custom method - rreplace(old, new)
 

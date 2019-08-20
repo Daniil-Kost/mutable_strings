@@ -1,5 +1,5 @@
 
-class MutStr(bytearray):
+class MutStr:
     """Class of Mutable String and methods for it"""
 
     def __init__(self, string):
@@ -9,7 +9,10 @@ class MutStr(bytearray):
         return MutStr(self.str.decode()[val])
 
     def __setitem__(self, item, val):
-        self.str[item] = bytes(val, "utf-8")
+        if isinstance(item, int):
+            self.str[item:item + 1] = bytes(val, "utf-8")
+        else:
+            self.str[item] = bytes(val, "utf-8")
         return MutStr(self.str.decode())
 
     def __str__(self):
